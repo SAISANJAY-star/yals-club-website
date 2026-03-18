@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>YALS CLUB | Premium Menswear</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial;
+  background:#f4f4f4;
+  color:#222;
+}
+
+/* HEADER */
+header{
+  background:#000;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  animation:slideDown 1s ease;
+}
+
+/* BRAND */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* LOGO */
+.logo{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff4e50,#f9d423,#24fe41,#00c6ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:15px;
+  color:#000;
+  letter-spacing:1px;
+  animation:pulse 3s infinite;
+}
+
+/* BRAND NAME */
+.brand h2{
+  font-size:30px;
+  color:#fff;
+  margin:0;
+  animation:slideRight 1.2s ease;
+}
+
+/* NAV */
+nav a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:500;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  background:#f5c542;
+  left:0;
+  bottom:-5px;
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* OPENING IMAGE */
+.opening{
+  position:relative;
+  height:90vh;
+  background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+  url("https://images.pexels.com/photos/769733/pexels-photo-769733.jpeg");
+  background-size:cover;
+  background-position:center;
+  animation:fadeIn 2s;
+}
+
+.opening-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  color:#fff;
+}
+
+/* HERO TEXT */
+.opening-text h1{
+  font-size:50px;
+  color:#f5c542;
+  margin-bottom:10px;
+  animation:fadeUp 1.5s ease;
+}
+
+.opening-text p{
+  font-size:30px;
+  font-weight:bold;
+  font-style:italic;
+  animation:fadeUp 2s ease;
+}
+
+/* SECTIONS */
+section{
+  padding:70px 40px;
+  max-width:1100px;
+  margin:auto;
+  animation:fadeUp 1.2s ease;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#fff;
+  box-shadow:0 5px 15px rgba(0,0,0,0.15);
+  text-align:center;
+  transition:.4s;
+  animation:fadeUp 1.5s ease;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.02);
+}
+
+.card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.card:hover img{
+  transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes slideDown{
+  from{transform:translateY(-50px); opacity:0;}
+  to{transform:translateY(0); opacity:1;}
+}
+
+@keyframes slideRight{
+  from{transform:translateX(-40px); opacity:0;}
+  to{transform:translateX(0); opacity:1;}
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.08);}
+  100%{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">YALS</div>
+    <h2>YALS CLUB</h2>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="opening" id="home">
+  <div class="opening-text">
+    <h1>Premium Menswear</h1>
+    <p>A Style That Defines You</p>
+  </div>
+</div>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p style="text-align:center;">
+    YALS Club is a Bangalore-based menswear brand located in Horamavu, created for the modern man who seeks the perfect balance of style, comfort, and affordability. Rooted in Indian sensibilities yet inspired by global fashion trends, YALS Club offers versatile apparel designed for casual, work, and lifestyle wear. With a strong focus on quality, contemporary design, and durability, the brand aims to deliver fashion that fits seamlessly into everyday urban life. Driven by a customer-centric approach, YALS Club aspires to become a trusted urban menswear brand known for its reliability, modern aesthetics, and consistent customer satisfaction.
+  </p>
+</section>
+
+<section id="products">
+  <h2>Our Collection</h2>
+
+  <div class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+      <h3>T-Shirts & Polos</h3>
+      <p>Comfort-focused everyday essentials</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10">
+      <h3>Casual & Formal Shirts</h3>
+      <p>Premium fabrics with contemporary fits</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+      <h3>Modern Bottom Wear</h3>
+      <p>Jeans, trousers and relaxed fits</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="text-align:center;">
+    📍 Horamavu, Bangalore<br>
+    📧 yalsclub@gmail.com<br>
+    📞 +91 8050403639
+  </p>
+</section>
+
+<footer>
+  <p>©️ 2026 YALS Club | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>>
